@@ -1,0 +1,136 @@
+@charset "UTF-8";
+.hero-wrapper {
+  margin-top: 98px;
+  height: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("/images/estetika-hero.jpg");
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+}
+
+.hero-wrapper .hero {
+  font-size: 2rem;
+  font-family: 'Oooh Baby', cursive;
+  text-transform: uppercase;
+}
+
+.services-wrapper .services {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: black;
+}
+
+.services-wrapper .services a {
+  color: black;
+}
+
+.services-wrapper .services a:hover {
+  color: #816ad3;
+}
+
+.services-wrapper .services a:nth-of-type(3) {
+  color: #816ad3;
+}
+
+.divs-wrapper .divs {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.divs-wrapper .divs .div-item {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  line-height: 23px;
+  background-color: white;
+  color: black;
+}
+
+.divs-wrapper .divs .div-item p, .divs-wrapper .divs .div-item ul {
+  margin: 10px 0;
+  color: #747474;
+}
+
+.divs-wrapper .divs .div-item hr {
+  margin: 10px 0;
+  border: 1px solid white;
+}
+
+.divs-wrapper .divs .div-item ul {
+  list-style-type: none;
+}
+
+.divs-wrapper .divs .div-item ul li::before {
+  content: "◾ ";
+}
+
+@media only screen and (max-width: 360px) {
+  .services-wrapper .services {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services-wrapper .services a {
+    margin: 10px 0;
+  }
+  .services-wrapper .services p {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-wrapper {
+    margin-top: 58px;
+  }
+  .hero-wrapper .hero {
+    font-size: 3rem;
+  }
+  .divs-wrapper .divs .div-item {
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: black;
+    padding: 10px 0;
+  }
+  .divs-wrapper .divs .div-item h3 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,169 @@
+.hero-wrapper {
+  height: 40vh;
+  margin-top: 98px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("/images/about-us-hero-back.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.hero-wrapper .hero {
+  margin: 0 auto;
+  width: 90%;
+  z-index: 1;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.about-us-wrapper {
+  padding: 20px 0;
+}
+
+.about-us-wrapper .about-us {
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  line-height: 23px;
+  color: #747474;
+}
+
+.about-us-wrapper .about-us img {
+  display: none;
+}
+
+.about-us-wrapper .about-us h3 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.osoblje-wrapper {
+  background-color: #f7f7f7;
+}
+
+.osoblje-wrapper .osoblje {
+  width: 90%;
+  margin: 0px auto;
+  padding: 20px 0;
+}
+
+.osoblje-wrapper .osoblje .staff-list .staff {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.osoblje-wrapper .osoblje .staff-list .staff img {
+  max-width: 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.osoblje-wrapper .osoblje .staff-list .staff h4 {
+  margin: 20px 0;
+}
+
+.osoblje-wrapper .osoblje .staff-list .staff + .staff {
+  margin-top: 20px;
+}
+
+.osoblje-wrapper .osoblje .staff-list .staff p {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  line-height: 23px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero-wrapper .hero {
+    text-align: left;
+    text-shadow: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-wrapper {
+    margin-top: 58px;
+    background-attachment: fixed;
+    background-position: bottom;
+  }
+  .about-us-wrapper .about-us {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .about-us-wrapper .about-us p {
+    margin-right: 20px;
+  }
+  .about-us-wrapper .about-us img {
+    max-width: 40%;
+    display: inline-block;
+  }
+  .osoblje-wrapper .osoblje .staff-list .staff {
+    background-color: white;
+    padding: 20px 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px 0;
+  }
+  .osoblje-wrapper .osoblje .staff-list .staff img {
+    max-width: 50%;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    transition: transform .5s ease;
+    transition: transform .5s ease, -webkit-transform .5s ease;
+  }
+  .osoblje-wrapper .osoblje .staff-list .staff img:hover {
+    -webkit-transform: rotateZ(5deg);
+            transform: rotateZ(5deg);
+  }
+  .osoblje-wrapper .osoblje .staff-list .staff p {
+    margin-left: 20px;
+    max-width: 50%;
+  }
+  .osoblje-wrapper .osoblje .staff-list .staff:nth-last-of-type(2), .osoblje-wrapper .osoblje .staff-list .staff:nth-last-of-type(4) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}

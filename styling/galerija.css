@@ -1,0 +1,194 @@
+body {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg stroke='%23CCC' stroke-width='0' %3E%3Crect fill='%23F5F5F5' x='-60' y='-60' width='110' height='240'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Slideshow container */
+.slideshow-container {
+  padding: 30px 0;
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto 0 auto;
+  /* Fading animation */
+}
+
+.slideshow-container .mySlides {
+  display: none;
+  /* Caption text */
+}
+
+.slideshow-container .mySlides img {
+  vertical-align: middle;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+          box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.slideshow-container .mySlides .text {
+  color: #000000;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 38px;
+  width: 100%;
+  text-align: center;
+}
+
+.slideshow-container .fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #816ad3;
+}
+
+.grid-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid-wrapper p {
+  display: none;
+}
+
+.grid-wrapper h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+}
+
+.grid-wrapper .flex-2 {
+  padding-bottom: 30px;
+}
+
+.grid-wrapper .flex-2 .picture img {
+  display: none;
+}
+
+.grid-wrapper .flex-2 .grid {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+}
+
+.grid-wrapper .flex-2 .grid img {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 601px) {
+  .grid-wrapper .flex-2 .grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-wrapper .flex-2 .grid img {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .slideshow-container {
+    margin-top: 58px;
+  }
+  .grid-wrapper h3, .grid-wrapper p {
+    text-align: right;
+  }
+  .grid-wrapper p {
+    display: block;
+    margin: 20px 0;
+  }
+  .grid-wrapper .flex-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .grid-wrapper .flex-2 .picture {
+    width: 50%;
+  }
+  .grid-wrapper .flex-2 .picture img {
+    display: block;
+    max-width: 80%;
+  }
+  .grid-wrapper .flex-2 .grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    width: 50%;
+    overflow: auto;
+    height: 500px;
+    margin-left: 50px;
+  }
+  .grid-wrapper .flex-2 .grid img {
+    opacity: .7;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+  }
+  .grid-wrapper .flex-2 .grid img:hover {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .slideshow-container .mySlides .text {
+    font-size: 1rem;
+  }
+  .prev, .next {
+    font-size: 20px;
+  }
+}

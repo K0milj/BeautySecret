@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Oooh+Baby&family=Roboto&display=swap');
+
+$main-color: rgb(2,1,36);
+$second-color: rgb(129, 106, 211);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Comfortaa', cursive;
+}
+
+body:hover{
+    cursor: default;
+}
+
+a{
+    text-decoration: none;
+}

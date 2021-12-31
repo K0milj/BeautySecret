@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Oooh+Baby&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+}
+
+body:hover {
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  z-index: 999;
+}
+
+.nav-wrapper .nav-top {
+  padding: 10px 0;
+  width: 90%;
+  text-align: right;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav-wrapper .nav-top p {
+  margin: 0 10px;
+}
+
+.nav-wrapper .nav-top a {
+  color: black;
+}
+
+.nav-wrapper nav {
+  margin: 0 auto;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-wrapper nav #navDesk {
+  display: none;
+}
+
+.nav-wrapper nav #navDesk a {
+  color: black;
+}
+
+.nav-wrapper nav #navDesk a:hover {
+  color: #816ad3;
+}
+
+.nav-wrapper nav #navMobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: #020124;
+  display: none;
+  -webkit-animation: navShow .3s ease;
+          animation: navShow .3s ease;
+}
+
+@-webkit-keyframes navShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-wrapper nav #navMobile a {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.nav-wrapper nav #navMobile #exitBtnWrapper {
+  position: absolute;
+  color: white;
+  position: absolute;
+  font-size: 1.2rem;
+  top: 0;
+  width: 90%;
+  margin: 0 auto;
+  height: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media only screen and (min-width: 768px) {
+  #openBtn {
+    display: none;
+  }
+  .nav-wrapper .nav-top, .nav-wrapper hr {
+    display: none;
+  }
+  .nav-wrapper nav #navDesk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-wrapper nav #navDesk a {
+    font-size: 0.9rem;
+  }
+  .nav-wrapper nav #navDesk a + a {
+    margin-left: 10px;
+  }
+}

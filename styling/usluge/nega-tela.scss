@@ -1,0 +1,183 @@
+.hero-wrapper{
+    margin-top: 98px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/nega-tela-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    .hero{
+        font-size: 2rem;
+        font-family: 'Oooh Baby', cursive;
+        text-transform: uppercase;
+    }
+}
+
+.services-wrapper{
+    .services{
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        color: black;
+
+        a{
+            color: black;
+            &:hover{
+                color: rgb(129, 106, 211);
+            }
+
+            &:nth-of-type(1){
+                color: rgb(129, 106, 211);
+            }
+        }
+    }
+}
+
+.divs{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .div-item{
+        margin: 10px 0;
+        padding: 10px;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        line-height: 23px;
+        background-color: white;
+        color: rgb(0, 0, 0);
+
+        p, ul{
+            color: rgb(116, 116, 116);
+        }
+        
+        &:nth-of-type(1){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img{
+                margin-top: 10px;
+                max-width: 100%;
+            }
+        }
+
+        &:nth-of-type(2){
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img{
+                margin-top: 10px;
+                max-width: 100%;
+            }
+        }
+
+        &:nth-of-type(3){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            img{
+                margin-top: 10px;
+                max-width: 100%;
+            }
+        }
+        
+        hr{
+            margin: 10px 0;
+            border: 1px solid white;
+        }
+
+        ul{
+            list-style-type: none;
+            
+            li::before{
+                content: "◾ ";
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .services-wrapper{
+        .services{
+            flex-direction: column;
+            a{
+                margin: 10px 0;
+            }
+            p{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-wrapper{
+        margin-top: 58px;
+        .hero{
+            font-size: 3rem;
+        }
+    }
+
+    .divs{
+        .div-item{
+            width: 50%;
+            text-align: left;
+            background-color: white;
+            box-shadow: none;
+            color: black;
+            padding: 10px 0;
+
+            h3{
+                text-align: center;
+            }
+
+            &:nth-of-type(1){
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                img{
+                    max-width: 30%;
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+            }
+
+            &:nth-of-type(2){
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+
+                img{
+                    margin-top: 0;
+                    margin-right: 30px;
+                }
+            }
+
+            &:nth-of-type(3){
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                img{
+                    max-width: 30%;
+                    margin-top: 0;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

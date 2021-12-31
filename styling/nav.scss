@@ -1,0 +1,123 @@
+@import "setup";
+
+.nav-wrapper{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    z-index: 999;
+
+    .nav-top{
+        padding: 10px 0;
+        width: 90%;
+        text-align: right;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        p{
+            margin: 0 10px;
+        }
+
+        a{
+            color: black;
+        }
+    }
+   
+    nav{
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        #navDesk{
+            display: none;
+            a{
+                color: black;
+                &:hover{
+                    color: $second-color;
+                }
+            }
+        }
+
+        #navMobile{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            z-index: 100;
+            background-color: #020124;
+            display: none;
+            animation: navShow .3s ease;
+    
+            @keyframes navShow {
+                0%{
+                    opacity: 0;
+                }
+    
+                100%{
+                    opacity: 1;
+                }
+            }
+    
+            a{
+                margin: 10px 0;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: whitesmoke;
+            }
+            
+            #exitBtnWrapper{
+                position: absolute;
+                color: white;
+                position: absolute;
+                font-size: 1.2rem;
+                top: 0;
+                width: 90%;
+                margin: 0 auto;
+                height: 58px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    #openBtn{
+        display: none;
+    }
+
+    .nav-wrapper{
+
+        .nav-top, hr{
+            display: none;
+        }
+
+        nav{
+            #navDesk{
+                display: flex;
+                align-items: center;
+                a{
+                    font-size: 0.9rem;
+
+                    & + a{
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,76 @@
+.hero-wrapper{
+    margin: 116px auto 116px auto;
+    width: 90%;
+
+    ul{
+        list-style-type: none;
+
+        li{
+            margin: 10px 0;
+
+            a{
+                color: black;
+            }
+        }
+    }
+
+    p{
+        margin: 30px 0;
+
+        &:nth-of-type(1){
+            i{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .hero-one{
+        margin-bottom: 50px;
+
+        iframe{
+            max-width: 100%;
+        }
+        img{
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .hero-wrapper{
+        .hero-one{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+
+            iframe{
+                width: 70%;
+            }
+
+            img{
+                display: inline-block;
+                max-width: 300px;
+                height: auto;
+                margin-left: 30px;
+                animation: showMap 1s ease-in;
+
+                @keyframes showMap {
+                    from{
+                        max-width: 0px;
+                        opacity: 0;
+                        transform: rotateZ(0);
+                    }
+
+                    to{
+                        max-width: 300px;
+                        opacity: 1;
+                        transform: rotateZ(360deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+

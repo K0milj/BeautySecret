@@ -1,0 +1,116 @@
+.hero-wrapper{
+    margin-top: 98px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/estetika-hero.jpg');
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    .hero{
+        font-size: 2rem;
+        font-family: 'Oooh Baby', cursive;
+        text-transform: uppercase;
+    }
+}
+
+.services-wrapper{
+    .services{
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        color: black;
+
+        a{
+            color: black;
+            &:hover{
+                color: rgb(129, 106, 211);
+            }
+
+            &:nth-of-type(3){
+                color: rgb(129, 106, 211);
+            }
+        }
+    }
+}
+
+.divs-wrapper{
+    .divs{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .div-item{
+            margin: 10px 0;
+            padding: 10px;
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            line-height: 23px;
+            background-color: white;
+            color: rgb(0, 0, 0);
+    
+            p, ul{
+                margin: 10px 0;
+                color: rgb(116, 116, 116);
+            }
+            
+            hr{
+                margin: 10px 0;
+                border: 1px solid white;
+            }
+    
+            ul{
+                list-style-type: none;
+                
+                li::before{
+                    content: "◾ ";
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .services-wrapper{
+        .services{
+            flex-direction: column;
+            a{
+                margin: 10px 0;
+            }
+            p{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hero-wrapper{
+        margin-top: 58px;
+        .hero{
+            font-size: 3rem;
+        }
+    }
+    .divs-wrapper{
+        .divs{
+            .div-item{
+                width:100%;
+                text-align: left;
+                background-color: white;
+                box-shadow: none;
+                color: black;
+                padding: 10px 0;
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
